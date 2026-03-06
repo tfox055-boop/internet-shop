@@ -1,0 +1,5 @@
+вход в режим работы с сервером - cd C:\Users\JetGame\Desktop\Internet_Shop
+Запуск сервера - node server.js
+
+Запуск работы с базой данных - mysql -u root -p
+Пароль 22022007VoVa

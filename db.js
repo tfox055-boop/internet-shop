@@ -1,11 +1,11 @@
 const mysql = require('mysql2');
+require('dotenv').config();
 
-// Создаем подключение к базе данных
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '22022007VoVa', // Введите пароль, который задавали при установке MySQL
-    database: 'internet_shop',
+    host: process.env.MYSQL_HOST || 'localhost',
+    user: process.env.MYSQL_USER || 'root',
+    password: process.env.MYSQL_PASSWORD || '',
+    database: process.env.MYSQL_DATABASE || 'internet_shop',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
