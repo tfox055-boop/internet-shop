@@ -63,6 +63,11 @@ testConnection().then(connected => {
 
 // API Routes
 
+// Маршрут для healthcheck (Railway)
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
 // Получить все товары
 app.get('/api/products', async (req, res) => {
     try {
